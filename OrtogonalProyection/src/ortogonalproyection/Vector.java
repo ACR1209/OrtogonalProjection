@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ortogonalproyection;
 
 import java.util.ArrayList;
@@ -11,8 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- *
- * @author USUARIO
+ * Clase para instanciar un vector.
+ * @author Andrés Coronel
  */
 public class Vector {
     int dimension;
@@ -56,14 +51,14 @@ public class Vector {
             
             for(int j = 0; j < i ; j++){
                
-                w[i] = add(w[i], proyect(w[i],w[j]));
+                w[i] = add(w[i], project(w[i],w[j]));
             }
         }
         
         return w;
     }
     
-    public static double[] proyect(double[] u1, double[] u2){
+    public static double[] project(double[] u1, double[] u2){
         Vector v1 = new Vector(u1);
         Vector v2 = new Vector(u2);
         double[] ans = u2.clone();
